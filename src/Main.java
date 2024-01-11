@@ -11,10 +11,11 @@ public class Main {
 
         double x, y;
         int escolha, continuar;
+        boolean yorno = true;
 
 // Looping de continuação:
 
-        do {
+        while (yorno) {
 
 // Solicitação p usuário (números):
 
@@ -50,10 +51,11 @@ public class Main {
             System.out.println("\nVocê deseja realizar outra operação? \n1 -> Sim \n2 -> Não");
             continuar = leia.nextInt();
 
+            if (continuar == 2) {
+                yorno = false;
+            }
+            System.out.println("Programa encerrado!");
+
         }
-
-        while (continuar == 1);
-
-        System.out.println("Programa encerrado!");
     }
 }
